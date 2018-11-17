@@ -1,0 +1,19 @@
+import cv2
+import numpy as np
+ref = "image-18.jpg"
+ref_img = cv2.imread(ref)
+x1 = 476
+y1 = 536
+x2 = 900
+y2 = 732
+cv2.rectangle(ref_img, (x1, y1), (x2, y2), (0, 0, 255), 2)
+x1 = 476
+y1 = 744
+x2 = 900
+y2 = 920
+cv2.rectangle(ref_img, (x1, y1), (x2, y2), (0, 0, 255), 2)
+print("Writing IMage")
+cv2.imwrite("Processed-image-18.jpg", ref_img)
+image = cv2.resize(ref_img, (0, 0), None, .25, .25)
+cv2.imshow("Processed-image-18.jpg", image)
+cv2.waitKey(0)
